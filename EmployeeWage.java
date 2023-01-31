@@ -1,6 +1,5 @@
-
 public class EmployeeWage {
-    public class Employee{
+    public class CompanyName{
     	
     	public static void EmployeeAttendence (String EmployeeName,String companyName,int Wage_per_hour,int Full_day_hours,int Part_time_hour) {
     		System.out.println("Employee Attendence calculation method in the -"+companyName);
@@ -8,8 +7,7 @@ public class EmployeeWage {
     		int employeeMOnthlySalary=0;		
     		int dailyWage = 0;
     		int Day=1;
-    		System.out.println("----------------------------------------");
-            while((Day<=20) && (WorkedHours<100)){
+            while((Day<=20) && (WorkedHours<100)){//her we have condition for the days and hours
             	int employeeCheck = (int) (Math.random() * 10) % 3;
                 System.out.println(employeeCheck + "in the day "+Day);
                 switch (employeeCheck) {
@@ -31,7 +29,6 @@ public class EmployeeWage {
                 Day++;
                 employeeMOnthlySalary=employeeMOnthlySalary+dailyWage;
             }
-            System.out.println("------------------------");
             System.out.println("Working hours is -"+WorkedHours);
             System.out.println(employeeMOnthlySalary +EmployeeName +" - Earned in the month");
     	
@@ -40,15 +37,17 @@ public class EmployeeWage {
     	 
     }
 	public static void main(String[] args) {
-		EmployeWage.Employee emp1=new EmployeWage().new Employee();
-		System.out.println("emp1 attendence and"
-				+ " earnings");
-		emp1.EmployeeAttendence("X","A",20,8,4);
-		System.out.println("###########################");
-		EmployeWage.Employee emp2=new EmployeWage().new Employee();
+		EmployeeWage.CompanyName a1=new EmployeeWage().new CompanyName();
+		System.out.println("Emp1 attendence and  earnings");
+		a1.EmployeeAttendence(" Mohan","X",20,8,4);
+		System.out.println("------------------------------------");
+		EmployeeWage.CompanyName a2=new EmployeeWage().new CompanyName();
 		System.out.println("emp2 attendence and"
 				+ " earnings");
-		emp1.EmployeeAttendence("Y","B",20,8,4);
+		a2.EmployeeAttendence("Patrick","Y",20,8,4);
+		
+		a1.EmployeeAttendence("ABC","Z",20,8,4);
+		a1.EmployeeAttendence("DEF","W",20,8,4);
 	}
 
 }
